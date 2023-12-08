@@ -1,5 +1,6 @@
 package com.wob.wobProject.entity;
 
+import com.wob.wobProject.constant.ChatType;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -46,4 +47,8 @@ public class Chat {
 
     private Boolean active;
     private String chatUuid;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "chat_type", nullable = false)
+    private ChatType chatType;
 }
